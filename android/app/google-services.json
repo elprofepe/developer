@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "288948783177",
+    "firebase_url": "https://profesor-4afb3.firebaseio.com",
+    "project_id": "profesor-4afb3",
+    "storage_bucket": "profesor-4afb3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:288948783177:android:a63df9bc52f29c1be55798",
+        "android_client_info": {
+          "package_name": "com.pe.el_profe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "288948783177-c7nkib5tktk8gf6ho1e30r2lgs6mjgkj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwGQZtG04mS1FhjKX5PgdzHXm9bqkhJ4s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "288948783177-c7nkib5tktk8gf6ho1e30r2lgs6mjgkj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "288948783177-f5743c0sbbddn1o631obnpvbak4rac6g.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "teachapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
