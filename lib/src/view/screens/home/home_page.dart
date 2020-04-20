@@ -33,17 +33,17 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) => Scaffold(
     backgroundColor: backgroundColor,
-    // appBar: AppBar(
-    //   backgroundColor: backgroundColor,
-    //   title: Text(
-    //     "Bienvenido ${GContext.getUser.name} ${GContext.getUser.lastName}",
-    //     overflow: TextOverflow.ellipsis,
-    //     maxLines: 1,
-    //     style: TextStyle(
-    //       color: accentColor,
-    //     ),
-    //   ),
-    // ),
+    appBar: _statefulWidgetIndex == 0 ? AppBar(
+      backgroundColor: backgroundColor,
+      title: Text(
+        "Bienvenido ${GContext.getUser.name} ${GContext.getUser.lastName}",
+        overflow: TextOverflow.ellipsis,
+        maxLines: 1,
+        style: TextStyle(
+          color: accentColor,
+        ),
+      ),
+    ) : null,
     resizeToAvoidBottomInset: false,
     resizeToAvoidBottomPadding: false,
     body: SafeArea(

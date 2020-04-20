@@ -75,7 +75,7 @@ class _SignInPageState extends BaseState<SignInPage> {
                     controller: _documentController,
                     focusNode: documentFocus,
                     textInputAction: TextInputAction.next,
-                    keyboardType: _typeInput,
+                    keyboardType: TextInputType.emailAddress,
                     maxLines: 1,
                     onFieldSubmitted: (value) => FocusScope.of(context).requestFocus(passwordFocus),
                     onSaved: (s) => _email = s,

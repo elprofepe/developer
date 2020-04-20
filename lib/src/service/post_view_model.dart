@@ -7,7 +7,7 @@ import 'package:firebase_storage/firebase_storage.dart';
 
 class PostViewModel {
 
-  static Future<dynamic> haveOneTherapiesActive() async {
+  static Future<dynamic> getAllPosts() async {
     return Firestore.instance.collection('posts')
       .getDocuments().then((onValue) async {
         if (onValue.documents.isNotEmpty) {

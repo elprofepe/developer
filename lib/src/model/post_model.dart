@@ -40,11 +40,11 @@ class Post {
         author = map['author'] ?? '',
         description = map['description'] ?? '',
         uid = map['uid'] ?? '',
-        imageUrl = ['imageUrl'] ?? '',
-        imageUrls = map['imageUrls'] != null ? List<String>.from(map['imageUrls'] ?? []) : [],
+        imageUrl = map['imageUrl'] ?? '',
+        imageUrls = List<String>.from(map['imageUrls'] ?? []),
         timePast = convert(map['timeCreate'] ?? 0) ?? '',
         timeCreate = map['timeCreate'] ?? 0,
-        isDelete = map['timeCreate'] ?? false,
+        isDelete = map['isDelete'] ?? false,
         isAttention = map['isAttention'] ?? false;
 
   static convert(timeCreate) {

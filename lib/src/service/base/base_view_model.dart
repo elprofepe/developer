@@ -7,7 +7,7 @@ class BaseViewModel {
       switch ((onError as PlatformException).code) {
         case 'ERROR_USER_NOT_FOUND': return [10, 'Correo no encontrado'];
           break;
-        case 'ERROR_WRONG_PASSWORD': return [10, 'Contraseña no encontrado'];
+        case 'ERROR_WRONG_PASSWORD': return [10, 'Contraseña incorrecta'];
           break;
         case 'ERROR_INVALID_EMAIL': return [10, 'Correo no encontrado'];
           break;

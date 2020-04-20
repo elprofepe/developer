@@ -27,7 +27,7 @@ class _HomeFragmentState extends State<HomeFragment> {
 
   @override
   Widget build(BuildContext context) => FutureBuilder(
-    future: PostViewModel.haveOneTherapiesActive(),
+    future: PostViewModel.getAllPosts(),
     builder: (context, snapshot) {
       switch (snapshot.connectionState) {
         case ConnectionState.waiting: return ColumnLoadingCard();        
@@ -37,21 +37,7 @@ class _HomeFragmentState extends State<HomeFragment> {
             switch (snapshot.data[0]) {
               case 0: {
                 List<Post> posts = snapshot.data[1];
-                // return ListView(
-                //   padding: EdgeInsets.symmetric(vertical: 20.0),
-                //   children: <Widget>[
-                //     Column(
-                //       crossAxisAlignment: CrossAxisAlignment.stretch,
-                //       children: posts.map((request){
-                //         return ItemHomeFragment(
-                //           isFirst: request,
-                //           post: request,
-                //         );
-                //       }).toList(),
-                //     )
-                //   ],
-                // );
-
+                
                 return ListView.builder(
                   itemCount: posts.length,
                   itemBuilder: (context, index) {
@@ -61,7 +47,6 @@ class _HomeFragmentState extends State<HomeFragment> {
                     );
                   }
                 );
-
 
               }
               break;

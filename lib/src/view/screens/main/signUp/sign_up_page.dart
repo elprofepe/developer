@@ -206,7 +206,7 @@ class _SignUpPageState extends BaseState<SignUpPage> {
                     controller: _emailController,
                     focusNode: emailFocus,
                     textInputAction: TextInputAction.next,
-                    keyboardType: _typeInput,
+                    keyboardType: TextInputType.emailAddress,
                     maxLines: 1,
                     onFieldSubmitted: (value) => FocusScope.of(context).requestFocus(passwordFocus),
                     onSaved: (s) => _email = s,
@@ -248,6 +248,8 @@ class _SignUpPageState extends BaseState<SignUpPage> {
                     validator: (String value) {
                       if (value.isEmpty) {
                         return "Campo obligatorio.";
+                      } else if (value.length <= 7) {
+                        return "Contraseña valida minimo 8 caracteres";
                       }
                       return null;
                     },
@@ -310,6 +312,7 @@ class _SignUpPageState extends BaseState<SignUpPage> {
       ),
     ),
   );
+  
   void _showDatePicker() {
     DatePicker.showDatePicker(
       context,
